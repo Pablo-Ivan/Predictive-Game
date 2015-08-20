@@ -5,7 +5,7 @@
 function Pala(x, mundoAlto) {
   this.mundoAlto = mundoAlto;
   this.ancho = 20;
-  this.alto = 80;
+  this.alto = 85;
   this.pos = new Vector2D(x, mundoAlto / 2);
   this.velocidad = 250;
 }
