@@ -1,53 +1,43 @@
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <script type="text/javascript" src="js/Sonidos.js"></script>
-        <script type="text/javascript" src="js/Controles.js"></script>
-        <script type="text/javascript" src="js/Vector2D.js"></script>
-        <script type="text/javascript" src="js/Pelota.js"></script>
-        <script type="text/javascript" src="js/Pala.js"></script>
-        <script type="text/javascript" src="js/Ia.js"></script>
-        <script type="text/javascript" src="js/Pong.js"></script>
-        <title>Predictive-Game</title>
-        <script type="text/javascript">
-        function log(texto,nueva){
-		    var capa=document.getElementById("log");
-		    if (nueva)
-		        capa.innerHTML+="<br/>"+texto;
-		    else
-		        capa.innerHTML=texto;
-		}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Predictive-Game by Pablo-Ivan</title>
 
-		window.requestAnimationFrame = (function(){
-		  return  window.requestAnimationFrame       ||
-		          window.webkitRequestAnimationFrame ||
-		          window.mozRequestAnimationFrame    ||
-		          function( callback ){
-		            window.setTimeout(callback, 1000 / 60);
-		          };
-		})();
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-        window.onload=function(){
-        	var pong = new Pong();
-        }
-        </script>
-    </head>
-    <body>
-        <canvas id="canvas"></canvas>
-        <div id="log"></div>
-
-        IA no 01: <input type="checkbox" id="ia1" /><br/>
-        IA no. 02: <input type="checkbox" id="ia2" checked="checked" />
-        <h3>Controles</h3>
-        <p>Utiliza las teclas W, S para moverte. <br> 
-           Activa o desactiva las casillas "IA no..." para alternar entre:</p>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Predictive-Game</h1>
+        <p>An unbeatable game.</p>
+        <p class="view"><a href="https://github.com/Pablo-Ivan/Predictive-Game">View the Project on GitHub <small>Pablo-Ivan/Predictive-Game</small></a></p>
         <ul>
-        	<li>Jugador contra máquina(W, S)</li>
-        	<li>Máquina contra máquina</li>
-        	<li>Jugador contra jugador</li>
+          <li><a href="https://github.com/Pablo-Ivan/Predictive-Game/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Pablo-Ivan/Predictive-Game/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Pablo-Ivan/Predictive-Game">View On <strong>GitHub</strong></a></li>
         </ul>
-        <p style="display: inline;">Conoce el <a style="text-decoration: none; color: blue;" href="http://pablo-ivan.github.io/Alpha-System/">Sistema</a> que controla al oponente.</p>
-        <hr>
-        <p>Algoritmo desarrollado por <i>Pablo Iván G. Soto</i></p>
-    </body>
+      </header>
+      <section>
+        <h3>
+<a id="pong" class="anchor" href="#pong" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pong.</h3>
+
+<p>Un juego controlado por Alpha.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/Pablo-Ivan">Pablo-Ivan</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
 </html>
