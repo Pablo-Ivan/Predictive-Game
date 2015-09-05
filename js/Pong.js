@@ -7,8 +7,8 @@ function Pong(ia) {
   this.iachk1 = document.getElementById('ia1');
   this.iachk2 = document.getElementById('ia2');
   this.canvas = document.getElementById('canvas');
-  this.canvas.width = 600;
-  this.canvas.height = 490;
+  this.canvas.width = 610;
+  this.canvas.height = 500;
   this.canvas.style.backgroundColor = 'black';
   this.contexto = this.canvas.getContext('2d');
   this.palas = [
