@@ -98,7 +98,7 @@ Pong.prototype.loop = function () {
   this.palas[1].dibujar(this.contexto);
   this.pelota.dibujar(this.contexto);
   var angulo = this.pelota.vector.getAnguloRelativo();
-  log('Velocidad: ' + this.pelota.velocidad + ' // Angulo: ' + angulo);
+  log('Velocidad: ' + this.pelota.velocidad);
   var self = this;
   requestAnimationFrame(function () {
     self.loop();
