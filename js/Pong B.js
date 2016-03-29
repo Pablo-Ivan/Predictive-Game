@@ -1,8 +1,3 @@
-/**********************************/
-/* Juan Gabriel Rodríguez Carrión */
-/*    jlabstudio.com       2013   */
-/**********************************/
-
 function Pong(ia){
     this.controles = new Controles();
     this.ia=ia;
