@@ -1,9 +1,3 @@
-/**********************************/
-/* Juan Gabriel Rodríguez Carrión */
-/*    jlabstudio.com       2013   */
-/**********************************/
-
-//Vectores
 function Vector2D(x,y){
     this.x=x;
     this.y=y;
