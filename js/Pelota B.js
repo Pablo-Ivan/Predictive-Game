@@ -1,8 +1,3 @@
-/**********************************/
-/* Juan Gabriel Rodríguez Carrión */
-/*    jlabstudio.com       2013   */
-/**********************************/
-
 function Pelota(mundoAncho,mundoAlto,pong){
     this.mundoAncho=mundoAncho;
     this.mundoAlto=mundoAlto;
