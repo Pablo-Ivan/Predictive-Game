@@ -8,7 +8,7 @@ function Pelota(mundoAncho, mundoAlto, pong) {
   this.posIni = new Vector2D(mundoAncho / 2, mundoAlto / 2);
   this.pos;
   this.pong = pong;
-  this.lado = 200; //15;
+  this.lado = 1; //15;
   this.velocidad = 300;
   this.velocidadIni = 300;
   this.incrementoVelocidad = 10;
