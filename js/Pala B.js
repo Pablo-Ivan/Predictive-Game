@@ -1,8 +1,3 @@
-/**********************************/
-/* Juan Gabriel Rodríguez Carrión */
-/*    jlabstudio.com       2013   */
-/**********************************/
-
 function Pala(x,mundoAlto){
     this.mundoAlto=mundoAlto;
     this.ancho=20;
