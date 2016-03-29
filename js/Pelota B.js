@@ -5,11 +5,11 @@ function Pelota(mundoAncho,mundoAlto,pong){
     this.pos;
     this.pong=pong;
 
-    this.lado=18;
+    this.lado=20;
     this.velocidad=300;
     this.velocidadIni=300;
     this.incrementoVelocidad=10;
-    this.maxAngulo=70;
+    this.maxAngulo=60;
     this.velocidad=this.velocidadIni;
     this.vector;
     this.sacar(-1);
