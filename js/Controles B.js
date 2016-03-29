@@ -1,8 +1,3 @@
-/**********************************/
-/* Juan Gabriel Rodríguez Carrión */
-/*    jlabstudio.com       2013   */
-/**********************************/
-
 var Direccion = { QUIETO:0, ARRIBA: 1, ABAJO:2 };
 function Controles(){    
     this.ARRIBA=false;
