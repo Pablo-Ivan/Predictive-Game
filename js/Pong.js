@@ -41,7 +41,7 @@ Pong.prototype.dibujarMundo = function () {
   }
   //Puntuacion
 
-  this.contexto.fillStyle = 'white';
+  this.contexto.fillStyle = '#f44336';
   this.contexto.font = 'bold 50px monospace';
   this.contexto.fillText((this.puntuaciones[0] < 10 ? '0' : '') + '' + this.puntuaciones[0], this.canvas.width / 2 - 80, 40);
   this.contexto.fillText((this.puntuaciones[1] < 10 ? '0' : '') + '' + this.puntuaciones[1], this.canvas.width / 2 + 20, 40);
@@ -98,7 +98,7 @@ Pong.prototype.loop = function () {
   this.palas[1].dibujar(this.contexto);
   this.pelota.dibujar(this.contexto);
   var angulo = this.pelota.vector.getAnguloRelativo();
-  log('Velocidad: ' + this.pelota.velocidad);
+  log('Speed: ' + this.pelota.velocidad);
   var self = this;
   requestAnimationFrame(function () {
     self.loop();
