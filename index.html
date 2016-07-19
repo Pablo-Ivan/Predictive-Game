@@ -1,1 +1,251 @@
-
+<!DOCTYPE html>
+<!--Estable y válido 18/07/2016. -->
+<html lang="es-MX">
+  <head>
+    <link href="//pablo-ivan.github.io/pablo.jpg" rel="icon">
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="El Pong Invencible">
+    <title>Alpha Pong</title>
+    
+    <link href="https://cdn.rawgit.com/Pablo-Ivan/pablo-ivan.github.io/master/stylesheets/w3.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        },
+        i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-67193166-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <script src="js/Sonidos.js"></script>
+    <script src="js/Controles.js"></script>
+    <script src="js/Vector2D.js"></script>
+    <script src="js/Pelota.js"></script>
+    <script src="js/Pala.js"></script>
+    <script src="js/Ia.js"></script>
+    <script src="js/Pong.js"></script>
+    
+    <script>
+      function log(texto, nueva) {
+        var capa = document.getElementById('log');
+        if (nueva) {
+          capa.innerHTML += '<br/>' + texto;
+        } else {
+          capa.innerHTML = texto;
+        }
+      }
+      window.requestAnimationFrame = (function() {
+        return window.requestAnimationFrame      ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              function(callback) {
+                window.setTimeout(callback, 1000/60);
+              };
+              
+      })();
+      window.onload = function() {
+        var pong = new Pong();
+      }
+    </script>
+    
+    <style>
+      body, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif;
+      }
+      button, h1, .w3-navbar {
+        font-family: "Montserrat", sans-serif;
+      }
+      #header-img {
+        height: 160px;
+        width: 170px;
+      }
+      #mobile {
+        margin-top: 51px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--desktop navbar-->
+    <ul class="w3-card-4 w3-large w3-left-align w3-navbar w3-red w3-top">
+      <li class="w3-hide-large w3-hide-medium w3-opennav w3-right">
+        <a class="w3-hover-white w3-large w3-padding-large w3-teal" href="javascript:void(0);" onclick="toogle()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+      <li>
+        <a class="w3-hover-white w3-padding-large" href="https://pablo-ivan.github.io/">
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-hover-white w3-padding-large" href="http://pablo-ivan.github.io/Alpha-System/">
+          Alpha
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-hover-white w3-padding-large" href="https://pablo-ivan.github.io/Diplomacy/">
+          Diplomacy
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-padding-large w3-white" href="javascript:void(0);">
+          Pong
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-hover-white w3-padding-large" href="https://pablo-ivan.github.io/Recursive-Game/">
+          Toe
+        </a>
+      </li>
+      
+      <li class="w3-hide-small w3-right">
+        <a class="w3-hover-white w3-padding-large" href="https://pablo-ivan.github.io/blog/posts.html">
+          Blog
+        </a>
+      </li>
+    </ul>
+    <!--end desktop navbar-->
+    
+    <!--mobile navbar-->
+    <div id="mobile" class="w3-card-4 w3-hide w3-hide-large w3-hide-medium w3-top">
+      <ul class="w3-large w3-left-align w3-navbar w3-teal">
+        <li>
+          <a class="w3-padding-large" href="http://pablo-ivan.github.io/Alpha-System/">
+            Alpha
+          </a>
+        </li>
+        <li>
+          <a class="w3-padding-large" href="https://pablo-ivan.github.io/Diplomacy/">
+            Diplomacy
+          </a>
+        </li>
+        <li>
+          <a class="w3-padding-large w3-white" href="javascript:void(0);">
+            Pong
+          </a>
+        </li>
+        <li>
+          <a class="w3-padding-large" href="https://pablo-ivan.github.io/Recursive-Game/">
+            Toe
+          </a>
+        </li>
+        
+        <li>
+          <a class="w3-padding-large" href="https://pablo-ivan.github.io/blog/posts.html">
+            Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end mobile navbar-->
+    
+    <!--header-->
+    <div class="w3-deep-orange w3-center w3-container w3-padding-64">
+      <div class="w3-padding-64">
+        <h1 class="w3-jumbo w3-margin">Alpha Pong</h1>
+        <p class="w3-center w3-xlarge">El Pong <br> Invencible</p>
+        
+        <a href="javascript:void(0);">
+          <button class="w3-btn w3-ripple w3-white w3-bottombar w3-border-red w3-leftbar w3-padding-xlarge w3-large w3-margin-top w3-hover-cyan">
+            Español
+          </button>
+        </a>
+        <a href="en">
+          <button class="w3-btn w3-white w3-bottombar w3-border-red w3-leftbar w3-padding-xlarge w3-large w3-margin-top w3-hover-cyan">
+            English
+          </button>
+        </a>
+      </div>
+    </div>
+    <!--end header-->
+    
+    <!--about-->
+    <div class="w3-container w3-light-grey w3-padding-64 w3-row-padding">
+      <div class="w3-content">
+        <div class="w3-one">
+          <h2 class="w3-blue w3-border-teal w3-center w3-leftbar w3-rightbar">Acerca de</h2>
+          
+          <p class="w3-text-grey">
+            Pong, el famoso juego de Atari, lo he rediseñado para que sea 
+            compatible con tecnologías más recientes. La mecánica es la misma, 
+            a diferencia que aquí el oponente es invencible. 
+            Diseñé el juego con un elemento <canvas>, que es propio de HTML 
+            para dibujar un lienzo en la página web. 
+            Para que el adversario pueda predecir los movimientos de la pelota, 
+            ejecuta un algoritmo geométrico que emplea el método cartesiano para 
+            encontrar las coordenadas de la pelota correctas. 
+            Claro que en algún punto puede perder sólo por una cosa: 
+            la velocidad de la pelota. En cualquier momento la pelota se moverá más 
+            rápido que Alpha y este perderá, si antes no ha perdido usted. 
+            Como su desarrollador, he vencido a mi juego sólo una vez, 
+            y fue por un error en el sistema de la AI.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--end about-->
+    
+    <!--pong-->
+    <div class="w3-container w3-light-grey w3-padding-64 w3-row-padding">
+      <div class="w3-content">
+        <div class="w3-one">
+          <div class="wrapper">
+            <section>
+              <h3>Pong</h3>
+              
+              <canvas class="w3-round" id="canvas"></canvas>
+              <div id="log"></div>
+              IA no 01: <input type="checkbox" id="ia1" checked="checked">
+              <br/>
+              IA no. 02: <input type="checkbox" id="ia2">
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end pong-->
+    
+    <!--footer-->
+    <footer class="w3-center w3-container w3-padding-16 w3-red">
+      <a href="https://github.com/Pablo-Ivan/" target="blank">
+        <i class="fa fa-github w3-hover-text-deep-orange w3-show-inline-block w3-xlarge"></i>
+      </a>
+      <a href="https://www.facebook.com/Pablo.Ivan.G.Soto" target="blank">
+        <i class="fa fa-facebook w3-hover-text-deep-orange w3-show-inline-block w3-xlarge"></i>
+      </a>
+      <p class="w3-center">
+        © 2015-2016. Pablo Iván G. Soto. <br>
+        Última modificación: 19/Julio/2016.
+      </p>
+    </footer>
+    <!--end footer-->
+    
+    <!--scripts-->
+    <script>
+      function toogle() {
+        document.getElementById('mobile').classList.toggle('w3-show');
+      }
+    </script>
+    <!--end scripts-->
+    <noscript>
+      La página que está viendo requiere el uso de JavaScript para su funcionamiento. 
+      Por favor, actívelo.
+    </noscript>
+  </body>
+</html>
