@@ -24,6 +24,6 @@ Pala.prototype.mover = function (delta, direccion) {
   }
 };
 Pala.prototype.dibujar = function (contexto) {
-  contexto.fillStyle = 'blue';
+  contexto.fillStyle = '#f44336';
   contexto.fillRect(this.pos.x - this.ancho / 2, this.pos.y - this.alto / 2, this.ancho, this.alto);
 };
