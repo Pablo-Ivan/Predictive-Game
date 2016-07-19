@@ -13,12 +13,14 @@
       ga('create', 'UA-67193166-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Pablo-Ivan/pablo-ivan.github.io/master/stylesheets/w3.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
      <link rel="icon" href="http://vignette3.wikia.nocookie.net/accelworld/images/5/5f/Chip_example.jpg/revision/latest?cb=20130827160806&amp;path-prefix=es">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<script type="text/javascript" src="js/Sonidos.js"></script>
+			<script type="text/javascript" src="js/Sonidos.js"></script>
         <script type="text/javascript" src="js/Controles.js"></script>
         <script type="text/javascript" src="js/Vector2D.js"></script>
         <script type="text/javascript" src="js/Pelota.js"></script>
@@ -50,17 +52,80 @@
     <![endif]-->
   </head>
   <body>
+  	<!--desktop navbar-->
+    <ul class="w3-card-4 w3-large w3-left-align w3-navbar w3-teal w3-top">
+      <li class="w3-hide-large w3-hide-medium w3-opennav w3-right">
+        <a class="w3-hover-white w3-large w3-padding-large w3-teal" href="javascript:void(0);" onclick="toogle()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+      <li>
+        <a class="w3-padding-large w3-white" href="javascript:void(0);">
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-hover-white w3-padding-large" href="http://pablo-ivan.github.io/Alpha-System/">
+          Alpha
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-hover-white w3-padding-large" href="https://pablo-ivan.github.io/Diplomacy/">
+          Diplomacy
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-hover-white w3-padding-large" href="https://pablo-ivan.github.io/Predictive-Game/">
+          Pong
+        </a>
+      </li>
+      <li class="w3-hide-small">
+        <a class="w3-hover-white w3-padding-large" href="https://pablo-ivan.github.io/Recursive-Game/">
+          Toe
+        </a>
+      </li>
+      
+      <li class="w3-hide-small w3-right">
+        <a class="w3-hover-white w3-padding-large" href="blog/posts.html">
+          Blog
+        </a>
+      </li>
+    </ul>
+    <!--end desktop navbar-->
+    
+    <!--mobile navbar-->
+    <div id="mobile" class="w3-card-4 w3-hide w3-hide-large w3-hide-medium w3-top">
+      <ul class="w3-large w3-left-align w3-navbar w3-teal">
+        <li>
+          <a class="w3-padding-large" href="http://pablo-ivan.github.io/Alpha-System/">
+            Alpha
+          </a>
+        </li>
+        <li>
+          <a class="w3-padding-large" href="https://pablo-ivan.github.io/Diplomacy/">
+            Diplomacy
+          </a>
+        </li>
+        <li>
+          <a class="w3-padding-large" href="https://pablo-ivan.github.io/Predictive-Game/">
+            Pong
+          </a>
+        </li>
+        <li>
+          <a class="w3-padding-large" href="https://pablo-ivan.github.io/Recursive-Game/">
+            Toe
+          </a>
+        </li>
+        
+        <li>
+          <a class="w3-padding-large" href="blog/posts.html">
+            Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end mobile navbar-->
     <div class="wrapper">
-      <header>
-        <h1>Juego Predictivo</h1>
-        <p>Un juego invencible.</p>
-        <ul>
-        	<li><a href="https://pablo-ivan.github.io">Página <strong>Principal</strong></a></li>
-          <li><a href="http://pablo-ivan.github.io/Alpha-System/">Alpha <strong>System</strong></a></li>
-          <li><a href="https://pablo-ivan.github.io/Recursive-Game/">Juego <strong>Recursivo</strong></a></li>
-          <li><a href="https://pablo-ivan.github.io/Predictive-Game/">Juego <strong>Predictivo</strong></a></li>
-        </ul>
-      </header>
       <section>
         <h3>
 <a id="pong" class="anchor" href="#pong" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pong.</h3>
@@ -80,8 +145,17 @@
         </ul>
       </section>
     </div>
-    <footer>
-      <p>Proyecto mantenido por <a href="https://github.com/Pablo-Ivan">Pablo Iván G. Soto</a></p>
+    <footer class="w3-center w3-container w3-padding-16 w3-teal">
+      <a href="https://github.com/Pablo-Ivan/" target="blank">
+        <i class="fa fa-github w3-hover-text-light-blue w3-show-inline-block w3-xlarge"></i>
+      </a>
+      <a href="https://www.facebook.com/Pablo.Ivan.G.Soto" target="blank">
+        <i class="fa fa-facebook w3-hover-text-light-blue w3-show-inline-block w3-xlarge"></i>
+      </a>
+      <p class="w3-center">
+        © 2015-2016. Pablo Iván G. Soto. <br>
+        Última modificación: 18/Julio/2016.
+      </p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
