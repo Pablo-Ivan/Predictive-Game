@@ -1,2 +1,2 @@
 # Predictive-Game
-An Alpha-Managed invincible game.
+An Alpha-Managed unbeatable game.
