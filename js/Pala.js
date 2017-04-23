@@ -5,9 +5,9 @@
 function Pala(x, mundoAlto) {
   this.mundoAlto = mundoAlto;
   this.ancho = 20;
-  this.alto = 90;
+  this.alto = 95; //90
   this.pos = new Vector2D(x, mundoAlto / 2);
-  this.velocidad = 250;
+  this.velocidad = 270; //250
 }
 Pala.prototype.mover = function (delta, direccion) {
   var distancia = Math.round(delta * this.velocidad);
